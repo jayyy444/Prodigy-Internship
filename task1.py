@@ -22,16 +22,13 @@ def decrypt(text, shift):
     # Decrypt by reversing the shift
     return encrypt(text, -shift)
 
-# Ask the user for the message to be encrypted/decrypted
 text = input("Please enter the message you want to encrypt or decrypt: ")
 
-# Ask the user for the shift value
 shift = int(input("Please enter the shift value (positive for encryption, negative for decryption): "))
 
-# Encrypt the input text
 encrypted_text = encrypt(text, shift)
 print(f"\nEncrypted message: {encrypted_text}")
 
-# Decrypt the encrypted text to verify correctness
+
 decrypted_text = decrypt(encrypted_text, shift)
 print(f"Decrypted message (to verify): {decrypted_text}")
